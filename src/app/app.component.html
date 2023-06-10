@@ -1,59 +1,198 @@
-<nav ngbNav #nav="ngbNav">
-    <!-- ////////////////////////////////////////// For First Assignement Form Starting Here ////////////////////////////////// -->
-    <ng-container [ngbNavItem]="1">
-        <ng-template ngbNavContent>
-            <mat-card-header>
-                <mat-card>
-                    <mat-form-field>
-                        <mat-label>e.g. Australia</mat-label>
-                        <input type="text" matInput [matAutocomplete]="auto">
-                        <mat-autocomplete #auto="matAutocomplete">
-                            <mat-option *ngFor="let option of options" [value]="option">
-                                {{option}}
-                            </mat-option>
-                        </mat-autocomplete>
-                    </mat-form-field>
-                </mat-card>
-            </mat-card-header>
-            <div id="wrapper">
-                <div class="submit">
-                    <button mat-raised-button color="primary" (click)="nav.select(2)">Next</button>
-                </div>
-            </div>
-        </ng-template>
+<mat-card class="example-card header">
+    <mat-card-header>
+        <div class="example-header-menu">
+            <mat-icon>menu</mat-icon>
+            <mat-icon style="color: white; margin-left: 10px;">table_chart</mat-icon>
+        </div>
+        <div class="example-header-button">
+            <button mat-raised-button> <mat-icon>account_circle</mat-icon>Log in</button>
+            <button mat-raised-button id="signup"> <mat-icon>keyboard_arrow_up</mat-icon>Sign Up</button>
+        </div>
 
-    </ng-container>
-    <!-- /////////////////////////////////////////// For First Assignement Form Ending Here /////////////////////////////////////// -->
+    </mat-card-header>
+    <mat-card-content class="example-content-body">
+        <div class="box content">
+            <div class="example-content-area">
+                <h1>
+                    <font color="white">Order</font>
+                    <font>Your</font> <br><br>
+                    <font>favourite</font> &nbsp;
+                    <font color="white">Dishes.</font><br><br>
 
-    <!-- /////////////////////////////////////// for Second Assignement starting Here ////////////////////////////////// -->
-    <ng-container [ngbNavItem]="2"><br>
-        <ng-template ngbNavContent>
-            <form>
-                <mat-form-field class="example-chip-list">
-                    <mat-label>e.g. Australia</mat-label>
-                    <mat-chip-grid #chipGrid aria-label="country selection">
-                        <mat-chip-row *ngFor="let country of countrys" (removed)="remove(country)">
-                            {{country}}
-                            <button matChipRemove [attr.aria-label]="'remove ' + country">
-                                <mat-icon>cancel</mat-icon>
-                            </button>
-                        </mat-chip-row>
-                    </mat-chip-grid>
-                    <input placeholder="New Country..." #countryInput [formControl]="countryCtrl"
-                        [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
-                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="add($event)" />
-                    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-                        <mat-option *ngFor="let country of filteredcountrys | async" [value]="country">
-                            {{country}}
-                        </mat-option>
-                    </mat-autocomplete>
-                </mat-form-field>
-            </form>
-            <div class="submit">
-                <button mat-raised-button color="accent" (click)="nav.select(1)">Back</button>&nbsp;&nbsp;
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Enter Your Postcode</mat-label>
+                            <span matPrefix>&nbsp; <mat-icon matSuffix>near_me</mat-icon></span>
+                            <input type="tel" matInput placeholder="Enter Your Postcode">
+                        </mat-form-field>
+                        <button mat-raised-button id="example-search-btn"> <mat-icon>search</mat-icon></button>
+                    </form>
+                    <div class="example-count-btn">
+                        <button mat-raised-button id="example-count-btn">230</button>
+                        <button mat-raised-button>30,000</button>
+                    </div>
+                    <span style="color:white; margin-left:175px;">Restaurants &nbsp; &nbsp; Users</span>
+                </h1>
             </div>
-        </ng-template>
-    </ng-container>
-    <!-- /////////////////////////////////////// for Second Assignement Form Ending Here ////////////////////////////////// -->
-    <div [ngbNavOutlet]="nav" class="mt-2"></div>
-</nav>
+        </div>
+
+        <div class="box example-burgar-img">
+            <img mat-card-image src="assets/burgar.png" width="400px" alt="Photo of a Burgar">
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<div class="example-shop-img example-card">
+    <img mat-card-image src="assets/dir_boy.jpg" width="503px" height="300px" alt="Photo of a retelar">
+    <img mat-card-image src="assets/user.jpg" width="503px" height="300px" alt="Photo of a shop">
+    <img mat-card-image src="assets/bburger.avif" width="503px" height="300px" alt="Photo of a Burgar">
+</div>
+
+<div class="example-card location">
+    <h2>Restaurants near you.</h2>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.302310839964!2d85.21230027508193!3d25.69441287739437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992bab6ccfea6a3%3A0x6b787207f71657cf!2sGreen%20Soft%20IT%20Company%20%26%20Training%20Institute!5e0!3m2!1sen!2sin!4v1686254495067!5m2!1sen!2sin"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <div class="view-cities">
+        <h1><u>View all cities</u></h1>
+
+        <table width="100%" height="300px">
+
+            <tr>
+                <td>Aberdeen</td>
+                <td>Edinburgh</td>
+                <td>Manchester</td>
+                <td>Oxford</td>
+            </tr>
+            <tr>
+                <td>Belfast</td>
+                <td>Glasgow</td>
+                <td>Merseyside</td>
+                <td>Sheffield</td>
+            </tr>
+            <tr>
+                <td>Birmingham</td>
+                <td>Hull</td>
+                <td>North East</td>
+                <td>South coast</td>
+            </tr>
+            <tr>
+                <td>Brighton and Sussex</td>
+                <td>Leeds</td>
+                <td>Northampton</td>
+                <td>South West</td>
+            </tr>
+            <tr>
+                <td>Cambridge and East Anglia</td>
+                <td>Leicester</td>
+                <td>Milton Keynes</td>
+                <td>Stoke</td>
+            </tr>
+            <tr>
+                <td>Cardiff</td>
+                <td>London</td>
+                <td>Nottingham</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<mat-card-content class="example-card">
+    <div class="example-phone-area">
+        <div class="action">
+            <h1>
+                Download the TiffinTom App on
+                your phone or tablet
+            </h1>
+
+
+            <p> Get your favourite food delivered in a flash.
+                You ll see when your rider s picked up your
+                order, and be able to follow them along the
+                way. You ll get a notification when they’re
+                nearby, to</p>
+        </div>
+        <div class="action" id="photo-action">
+            <img src="assets/phone.jpeg" height="480px" alt="phone">
+        </div>
+    </div>
+</mat-card-content>
+
+<div class="example-card">
+    <div id="example-download">
+        <h1>Download the app</h1><br>
+        <button mat-raised-button> <mat-icon>apps</mat-icon>App Store</button> &nbsp; &nbsp;
+        <button mat-raised-button> <mat-icon>play_arrow</mat-icon>Google Play</button>
+    </div>
+</div>
+
+<div class="example-card bgc-img">
+    <div id="example-bgc-img">
+        <h1>Subscribe to our newsletter for updates
+            and exclusive promotion</h1><br><br>
+
+        <form class="example-form">
+            <mat-form-field id="example-full-width">
+                <mat-label>Enter Your Email</mat-label>
+                <input type="tel" matInput placeholder="Enter Your Email">
+                <button matTextSuffix id="example-submit-btn">Submit</button>
+            </mat-form-field>
+        </form>
+    </div>
+</div>
+<div class="example-card">
+    <div class="view-cities">
+        <table width="100%" height="300px">
+            <tr>
+                <th>Navigation</th>
+                <th>Partners</th>
+                <th>Support</th>
+                <th>FOLLOW US</th>
+            </tr>
+            <tr>
+                <td>Aberdeen</td>
+                <td>Edinburgh</td>
+                <td>Manchester</td>
+                <td>Oxford</td>
+            </tr>
+            <tr>
+                <td>Belfast</td>
+                <td>Glasgow</td>
+                <td>Merseyside</td>
+                <td>Sheffield</td>
+            </tr>
+            <tr>
+                <td>Birmingham</td>
+                <td>Hull</td>
+                <td>North East</td>
+                <td>South coast</td>
+            </tr>
+            <tr>
+                <td>Brighton and Sussex</td>
+                <td>Leeds</td>
+                <td>Northampton</td>
+                <td>South West</td>
+            </tr>
+            <tr>
+                <td>Cambridge and East Anglia</td>
+                <td>Leicester</td>
+                <td>Milton Keynes</td>
+                <td>Stoke</td>
+            </tr>
+            <tr>
+                <td>Cardiff</td>
+                <td>London</td>
+                <td>Nottingham</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<hr width="80%" style="margin-left: 150px;">
+
+<div class="example-card">
+    <div class="copyright">
+        <span>&copy; 2022 TiffinTom Ltd. All Rights Reserved.</span>
+        <span style="float:right;">Terms of Service Privacy Policy</span>
+    </div>
+</div>
