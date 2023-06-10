@@ -11,10 +11,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input'
 import {MatIconModule} from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
-import {MatButtonModule} from '@angular/material/button'
+import {MatButtonModule} from '@angular/material/button';
+import { AssignmentComponent } from './assignment/assignment.component'
 @NgModule({
   declarations: [
     AppComponent,
+    AssignmentComponent,
   ],
   imports: [
     BrowserModule,

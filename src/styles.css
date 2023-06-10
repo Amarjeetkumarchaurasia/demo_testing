@@ -1,10 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-mdc-form-field-subscript-wrapper {
     height: 0px;
 }
+/* 
 .mat-mdc-form-field-has-icon-prefix .mat-mdc-text-field-wrapper {
     padding-left: 0;
     --mat-mdc-form-field-label-offset-x: -16px;
@@ -15,4 +15,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     position: absolute;
     left: 142px;
     margin-top: 30px;
-}
+} */

@@ -1,4 +1,4 @@
-.example-card {
+/* .example-card {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -48,18 +48,18 @@
 
 .example-content-body {
     width: calc(100% - 33px);
-    height: 500px;
+    height: 500px; */
     /* background-color: red; */
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     margin-top: -60px;
 }
 
 .box {
     width: calc(100% - 300px);
-    height: 500px;
+    height: 500px; */
     /* background-color: blue; */
-    margin: 5px;
+    /* margin: 5px;
 }
 
 .example-content-area {
@@ -133,9 +133,9 @@ font {
 
 .view-cities {
     width: 80%;
-    height: 400px;
+    height: 400px; */
     /* background-color: red; */
-    cursor: pointer;
+    /* cursor: pointer;
 }
 
 table,
@@ -158,9 +158,9 @@ td {
     width: calc(100% - 50%);
     float: left;
     height: 100%;
-    color: white;
+    color: white; */
     /* background-color: red; */
-}
+/* }
 
 .action>h1 {
     margin: 50px;
@@ -245,4 +245,4 @@ td {
 
 .copyright>span {
     font-size: 18px;
-}
+} */
